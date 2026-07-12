@@ -103,10 +103,6 @@ import { isDashboardEmbeddedChatEnabled } from "@/lib/dashboard-flags";
 import { api } from "@/lib/api";
 import type { StatusResponse, UpdateCheckResponse } from "@/lib/api";
 
-function RootRedirect() {
-  return <Navigate to="/sessions" replace />;
-}
-
 function UnknownRouteFallback({ pluginsLoading }: { pluginsLoading: boolean }) {
   if (pluginsLoading) {
     // Render nothing during the plugin-load window — a spinner here would just flash.
